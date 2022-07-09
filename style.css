@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  z-index: 0;
+}
+
+body {
+  background-color: #3898EC;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+header nav div:first-of-type img {
+  width: 220px;
+}
+header nav div:last-of-type .toggle {
+  display: none;
+  cursor: pointer;
+}
+header nav div:last-of-type .toggle i {
+  color: #036DCA;
+  font-size: 25px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 3px;
+}
+header nav div:last-of-type ul {
+  display: flex;
+  align-items: center;
+}
+header nav div:last-of-type ul li {
+  margin: 0 20px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+header nav div:last-of-type ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s;
+}
+header nav div:last-of-type ul li a:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+header nav div:last-of-type ul li .mint-btn-nav {
+  cursor: not-allowed;
+  background-color: #036DCA;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.homepage {
+  height: 100vh;
+  background-color: #3898EC;
+  position: relative;
+}
+.homepage .ctn {
+  display: flex;
+  justify-content: center;
+}
+.homepage .ctn h1 {
+  font-family: "Bangers", sans-serif;
+  color: white;
+  font-size: 220px;
+  opacity: 0.8;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  width: auto;
+}
+.homepage .ctn img {
+  width: 90%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 950px) {
+  header nav div:last-child ul {
+    display: none;
+  }
+  header nav div:last-child .toggle {
+    display: block;
+  }
+  header nav div:last-child .toggle .open {
+    display: block;
+  }
+  header nav div:last-child .toggle .close {
+    display: none;
+  }
+
+  .open-menu .open {
+    display: none !important;
+  }
+
+  .open-menu .close {
+    display: block !important;
+  }
+}
+.roadmap {
+  height: auto;
+  position: relative;
+  background-color: #3898EC;
+}
+.roadmap .roadmap-ctn {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.roadmap .roadmap-ctn div {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.roadmap .roadmap-ctn div img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

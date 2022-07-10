@@ -55,7 +55,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99;
 }
 header .desktop-menu {
   display: flex;
@@ -87,6 +86,7 @@ header .desktop-menu ul li .mint-btn-nav {
   border-radius: 3px;
 }
 header .desktop-menu .toggle {
+  z-index: 99;
   display: none;
   cursor: pointer;
 }
@@ -98,9 +98,25 @@ header .desktop-menu .toggle i {
   border-radius: 3px;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 550px) {
+  body header nav {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
   body .homepage .title-home {
     width: 300px !important;
+    top: 35% !important;
+  }
+}
+@media screen and (max-width: 940px) {
+  body .homepage .title-home {
+    width: 500px;
+  }
+  body .homepage .soldier-solo {
+    display: block !important;
+  }
+  body .homepage .soldiers-home {
+    display: none;
   }
 
   header .desktop-menu ul {
@@ -143,6 +159,15 @@ body .homepage .title-home {
   z-index: 0;
 }
 body .homepage .soldiers-home {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+body .homepage .soldier-solo {
+  display: none;
   width: 90%;
   position: absolute;
   bottom: 0;

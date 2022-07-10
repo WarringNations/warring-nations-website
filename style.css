@@ -50,127 +50,149 @@ table {
   border-spacing: 0;
 }
 
-* {
-  z-index: 0;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
 }
-
-body {
-  background-color: #3898EC;
-}
-
-header nav {
+header .desktop-menu {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 30px;
 }
-header nav div:first-of-type img {
-  width: 220px;
+header .desktop-menu a img {
+  width: 200px;
 }
-header nav div:last-of-type .toggle {
+header .desktop-menu ul li {
+  display: inline-block;
+  margin: 0 20px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+header .desktop-menu ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.1s;
+}
+header .desktop-menu ul li a:hover {
+  opacity: 0.8;
+}
+header .desktop-menu ul li .mint-btn-nav {
+  cursor: not-allowed;
+  background-color: #036DCA;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+header .desktop-menu .toggle {
   display: none;
   cursor: pointer;
 }
-header nav div:last-of-type .toggle i {
+header .desktop-menu .toggle i {
   color: #036DCA;
   font-size: 25px;
   background-color: white;
   padding: 15px;
   border-radius: 3px;
 }
-header nav div:last-of-type ul {
-  display: flex;
-  align-items: center;
+
+@media screen and (max-width: 940px) {
+  body .homepage .title-home {
+    width: 300px !important;
+  }
+
+  header .desktop-menu ul {
+    display: none;
+  }
+  header .desktop-menu .toggle {
+    display: block;
+  }
+  header .desktop-menu .toggle .ouvrir {
+    display: block;
+  }
+  header .desktop-menu .toggle .fermer {
+    display: none;
+  }
+
+  .open .ouvrir {
+    display: none !important;
+  }
+
+  .open .fermer {
+    display: block !important;
+  }
+
+  .open .mobile-menu {
+    transform: translateX(0) !important;
+  }
 }
-header nav div:last-of-type ul li {
-  margin: 0 20px;
+body .homepage {
+  background-color: #3898EC;
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+}
+body .homepage .title-home {
+  position: absolute;
+  width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+body .homepage .soldiers-home {
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+body .homepage .mobile-menu {
+  background-color: #141826;
+  height: 100%;
+  max-width: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: all 0.4s;
+}
+body .homepage .mobile-menu ul {
+  padding: 100px 80px 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body .homepage .mobile-menu ul li {
+  display: inline-block;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
+  font-size: 20px;
 }
-header nav div:last-of-type ul li a {
+body .homepage .mobile-menu ul li a {
   text-decoration: none;
   color: white;
   transition: all 0.1s;
 }
-header nav div:last-of-type ul li a:hover {
+body .homepage .mobile-menu ul li a:hover {
   opacity: 0.8;
-  transform: scale(1.2);
 }
-header nav div:last-of-type ul li .mint-btn-nav {
+body .homepage .mobile-menu ul .mint-btn-nav {
   cursor: not-allowed;
   background-color: #036DCA;
   padding: 10px 20px;
   border-radius: 3px;
+  display: inline-block;
 }
-
-.homepage {
-  height: 100vh;
-  background-color: #3898EC;
-  position: relative;
-}
-.homepage .ctn {
+body .homepage .mobile-menu ul div {
   display: flex;
-  justify-content: center;
-}
-.homepage .ctn h1 {
-  font-family: "Bangers", sans-serif;
-  color: white;
-  font-size: 220px;
-  opacity: 0.8;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  width: auto;
-}
-.homepage .ctn img {
-  width: 90%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-}
-
-@media screen and (max-width: 950px) {
-  header nav div:last-child ul {
-    display: none;
-  }
-  header nav div:last-child .toggle {
-    display: block;
-  }
-  header nav div:last-child .toggle .open {
-    display: block;
-  }
-  header nav div:last-child .toggle .close {
-    display: none;
-  }
-
-  .open-menu .open {
-    display: none !important;
-  }
-
-  .open-menu .close {
-    display: block !important;
-  }
-}
-.roadmap {
-  height: auto;
-  position: relative;
-  background-color: #3898EC;
-}
-.roadmap .roadmap-ctn {
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-}
-.roadmap .roadmap-ctn div {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-}
-.roadmap .roadmap-ctn div img {
-  width: 100%;
+  margin-top: 50px;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
